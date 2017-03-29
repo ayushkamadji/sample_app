@@ -23,3 +23,6 @@
 # Ignore vim swap files
 *.swp
 *.swo
+
+# Ignore Spring files.
+/spring/*.pid
