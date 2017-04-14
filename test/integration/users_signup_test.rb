@@ -6,7 +6,7 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
     get signup_path
 
     assert_no_difference 'User.count' do
-      assert_select "form:match('action',?)", "/signup" 
+      assert_select 'form[action=?]', "/signup"
       post signup_path, params: {user: {name: "",
                                        email: "foo@bar",
                                        password: "foo",
