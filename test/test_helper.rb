@@ -27,4 +27,11 @@ class ActionDispatch::IntegrationTest
                                         password: password,
                                         remember_me: remember_me}}
   end
+
+  def simulate_activation_digest_creation(user)
+    user.activation_token = User.new_token
+    user.activation_digest = User.digest(user.activation_token)
+    user.save
+    user.reload
+  end
 end

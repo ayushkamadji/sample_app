@@ -3,10 +3,19 @@ example:
   email: example@example.org
   password_digest: <%= User.digest('password') %>
   admin: true
+  activated: true
+  activated_at: <%= Time.zone.now %>
 
 foobar:
   name: Foobar
   email: foobar@example.net
+  password_digest: <%= User.digest('password') %>
+  activated: true
+  activated_at: <%= Time.zone.now %>
+
+verynew:
+  name: Verynew
+  email: verynew@example.org
   password_digest: <%= User.digest('password') %>
 
 <% 30.times do |n| %>
@@ -14,4 +23,6 @@ user_<%= n %>:
   name: User-<%= n %>
   email: user-<%= n %>@example.org
   password_digest: <%= User.digest('password') %>
+  activated: true
+  activated_at: <%= Time.zone.now %>
 <% end %>
