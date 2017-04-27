@@ -26,3 +26,6 @@
 
 # Ignore Spring files.
 /spring/*.pid
+
+# Ignore CarrierWave uploads
+/public/uploads

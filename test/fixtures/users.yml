@@ -18,6 +18,20 @@ verynew:
   email: verynew@example.org
   password_digest: <%= User.digest('password') %>
 
+archer:
+  name: Archer
+  email: archer@example.org
+  activated: true
+  activated_at: <%= Time.zone.now %>
+  password_digest: <%= User.digest('password') %>
+
+lana:
+  name: Lana
+  email: lana@example.org
+  activated: true
+  activated_at: <%= Time.zone.now %>
+  password_digest: <%= User.digest('password') %>
+
 <% 30.times do |n| %>
 user_<%= n %>:
   name: User-<%= n %>
